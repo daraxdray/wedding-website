@@ -84,7 +84,7 @@ const HotelSection = (props) => {
                                         </div>
                                         <div className="col">
                                         <p className="text-center ">{partner.room} Rooms</p>
-                                        <p className="text-center text-danger">N{partner.price}</p>
+                                        <p className="text-center text-danger">N {partner != null ?partner.price.toLocaleString():''}</p>
                                         </div>
                                     </div>
 

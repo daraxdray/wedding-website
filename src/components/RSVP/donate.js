@@ -67,7 +67,7 @@ export default function Donate({ inputAmount, buttonText = null, paymentDone = (
                     </a>
                 </div>
                 <div className="submit-area col-12 col-lg-6">
-                    <button type="button" disabled={!isValid} onClick={() => setPayBy((val) => !val)} className="theme-btn bg-secondary">{buttonText != null ? 'Checkout (Naira)' : 'Donate (Naira)'}</button>
+                    <button type="button" disabled={!isValid} onClick={() => setPayBy((val) => !val)} className="theme-btn bg-secondary">{buttonText != null ? 'Checkout(₦)' : 'Donate (₦)'}</button>
                 </div>
             </div>
 

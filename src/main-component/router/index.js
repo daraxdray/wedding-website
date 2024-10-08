@@ -31,6 +31,7 @@ import ComingSoonPage from '../ComingSoonPage/ComingSoonPage'
 import LoginPage from '../LoginPage'
 import SignUpPage from '../SignUpPage'
 import ForgotPassword from '../ForgotPassword'
+import AdminComponent from '../Admin';
 
 const AllRoute = () => {
 
@@ -60,6 +61,7 @@ const AllRoute = () => {
           <Route path='groom-bride' element={<BrideGroomPage />} />
           <Route path='coming' element={<ComingSoonPage />} />
           <Route path='404' element={<ErrorPage />} />
+          <Route path='admin' element={<AdminComponent />} />
           <Route path='blog-single/:id' element={<BlogDetails />} />
           <Route path='blog-single-left-sidebar/:id' element={<BlogDetailsLeftSiide />} />
           <Route path='blog-single-fullwidth/:id' element={<BlogDetailsFull />} />

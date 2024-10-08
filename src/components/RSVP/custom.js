@@ -15,7 +15,7 @@ import { storeObjectToFile } from '../../api/controller';
 import { useGlobalState } from '../../data/globalState';
 
 
-const FinalFormField = React.memo(({ donate = false ,forms = {}, setForms = (val)=>{}, selected = 0, setSelected = (val)=>{}, handleClose, response}) => {
+ export const FinalFormField = React.memo(({ donate = false ,forms = {}, setForms = (val)=>{}, selected = 0, setSelected = (val)=>{}, handleClose, response}) => {
     const [loading, setLoading] = useState(null);
     const [allValid, setAllValid] = useState(false);
     const [reservationDays, setReserveDays] = useState(1);
@@ -32,7 +32,7 @@ const FinalFormField = React.memo(({ donate = false ,forms = {}, setForms = (val
         const timeDifference = d2 - d1;
     if(d1 < new Date(minDate)) return alert("'Please checkin date must be on or after December 19, 2024");
     if(d2 > new Date(maxDate)) return alert("'Please check out date must be on or before December 24, 2024");
-        console.log(timeDifference);
+        
         if (timeDifference < -1) {
             setAllValid(false);
             
@@ -74,7 +74,7 @@ const FinalFormField = React.memo(({ donate = false ,forms = {}, setForms = (val
     return <>
         <form onSubmit={(e) => submitHandler(e)} className="contact-validation-active" >
 
-            {response.specialAccom && selected != null && <div className="alert alert-secondary alert-sm m-5 w-75 m-auto mt-3" >
+            {response.specialAccom && selected != null && <div className="alert alert-secondary alert-sm m-5 w-75 m-auto mt-3 mb-3" >
                 <div className='row'>
                     <div className='col'>
                         <p className='text-secondary'>Selected Hotel</p>
@@ -82,7 +82,7 @@ const FinalFormField = React.memo(({ donate = false ,forms = {}, setForms = (val
                 </div>
                 {<p className='text-dark'>{AppConfig.hotels[selected].room} Rooms - N{(AppConfig.hotels[selected].price * reservationDays).toLocaleString()}  for <strong>{reservationDays} Days</strong><div className='text-danger btn btn-sm ml-5' onClick={() => setSelected(null)}>Clear</div></p>}
             </div>}
-            <div className="form-field">
+            <div className="form-field ">
                 <input
                     value={forms.name}
                     type="text"
@@ -177,7 +177,7 @@ const FinalFormField = React.memo(({ donate = false ,forms = {}, setForms = (val
                 :
                 response.specialAccom ? <div className="submit-area">
                     {
-                        <Donate inputAmount={AppConfig.hotels[selected].price * reservationDays} buttonText="Checkout" paymentDone={submitHandler} isValid={allValid}
+                        <Donate inputAmount={AppConfig.hotels[selected]?.price * reservationDays} buttonText="Checkout" paymentDone={submitHandler} isValid={allValid}
                             {...forms} purpose='Accomodation' />
                     }
                 </div> :

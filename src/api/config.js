@@ -122,7 +122,7 @@ const AppConfig = {
         brideGrooms: false,
         eventSection: true,
         partnerSection: false,
-        blogSection: false,
+        blogSection: true,
         footer: true,
         scrollbar: true,
     },
