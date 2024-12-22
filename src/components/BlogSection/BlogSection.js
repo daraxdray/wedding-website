@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
 import SectionTitle from '../SectionTitle'
-import blogs from '../../api/blogs'
 import HotelSection from '../RSVP/hotels'
 import { FinalFormField } from '../RSVP/custom'
 

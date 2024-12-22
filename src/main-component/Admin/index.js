@@ -10,7 +10,7 @@ import { collection, getDocs } from 'firebase/firestore';
 const AdminComponent = () => {
     const [users, setUserList] = useState([])
     const [loading, setLoading] = useState(false)
-    
+
     const fetchNames = async () => {
         try {
             setLoading(true);
@@ -27,10 +27,10 @@ const AdminComponent = () => {
         }
     };
 
-    
-    useEffect(()=>{
-       fetchNames(); 
-    },[]);
+
+    useEffect(() => {
+        fetchNames();
+    }, []);
 
     return (
         <Fragment>

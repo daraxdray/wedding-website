@@ -32,6 +32,9 @@ import LoginPage from '../LoginPage'
 import SignUpPage from '../SignUpPage'
 import ForgotPassword from '../ForgotPassword'
 import AdminComponent from '../Admin';
+import GetAccessCode from '../GetAccessCode';
+import VerifyAccessCode from '../GetAccessCode/verify';
+import MediaPlatform from '../../components/RSVP/upload_images';
 
 const AllRoute = () => {
 
@@ -41,6 +44,9 @@ const AllRoute = () => {
         <Routes>
           <Route path='/' element={<Homepage />} />
           <Route path='home' element={<Homepage />} />
+          <Route path='get-access-code' element={<GetAccessCode />} />
+          <Route path='verify-access-code' element={<VerifyAccessCode />} />
+          <Route path='upload-memories' element={<MediaPlatform />} />
           <Route path='home2' element={<Homepage2 />} />
           <Route path='home3' element={<HomePage3 />} />
           <Route path='home4' element={<HomePage4 />} />

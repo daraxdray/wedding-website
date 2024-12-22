@@ -52,7 +52,7 @@ const LocationMap = ({ maxWidth, button, buttonClass, mapLink = AppConfig.mapLin
     return (
         <Fragment>
             <Button
-                className={`btn ${buttonClass}`}
+                className={`btn `}
                 onClick={handleClickOpen}>
                 {button}
                 See Location

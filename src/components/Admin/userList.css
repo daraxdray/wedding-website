@@ -1,0 +1,54 @@
+/* Container for user cards */
+.user-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Adds spacing between each user card */
+    margin: 20px;
+  }
+  
+  /* User card design */
+  .user-card {
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .user-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* User information layout */
+  .user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  /* Individual field layout */
+  .user-field {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #333;
+    font-size: 16px;
+  }
+  
+  /* Icon styling */
+  .icon {
+    color: #4CAF50; /* Green color for icons */
+    font-size: 18px;
+  }
+  
+  /* Responsive design for mobile */
+  @media (max-width: 768px) {
+    .user-card {
+      padding: 10px;
+    }
+    .user-field {
+      font-size: 14px;
+    }
+  }

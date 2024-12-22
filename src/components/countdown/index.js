@@ -49,19 +49,19 @@ const TimeCountDown = () => {
     <div>
       <div className='countdown-wrapper'>
         <div className='time-section'>
-          <div className='time'>{state.days || '0'}</div>
+          <div className='time'>{state.days && state.days > 0? state.days : 'D-Day'}</div>
           <small className="time-text">Days</small>
         </div>
         <div className='time-section'>
-          <div className='time'>{state.hours || '00'}</div>
+          <div className='time'>{state.hours && state.hours > 0? state.hours : '00'}</div>
           <small className="time-text">Hours</small>
         </div>
         <div className='time-section'>
-          <div className='time'>{state.minutes || '00'}</div>
+          <div className='time'>{state.minutes && state.minutes > 0 ? state.minutes : '00'}</div>
           <small className="time-text">Min</small>
         </div>
         <div className='time-section'>
-          <div className='time'>{state.seconds || '00'}</div>
+          <div className='time'>{state.seconds && state.seconds > 0 ? state.seconds : '00'}</div>
           <small className="time-text">Sec</small>
         </div>
       </div>

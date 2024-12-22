@@ -1,6 +1,7 @@
 import React from 'react'
 import TimeCountDown from '../countdown'
 import AppConfig from '../../api/config'
+import { AccessCodeGenerator } from '../RSVP/access_code_generator'
 
 
 const Hero = (props) => {
@@ -33,6 +34,7 @@ const Hero = (props) => {
             </div>
             <div className="static-hero-right">
                 <div className="static-hero-img">
+                    
                     <div className="static-hero-img-inner">
                         <img src={AppConfig.hero1.hImg1} alt=""/>
                     </div>
